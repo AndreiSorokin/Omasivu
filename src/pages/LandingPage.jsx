@@ -6,6 +6,7 @@ import '../App.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel } from 'swiper/modules';
 import 'swiper/css';
+import '../styles/landing.css'
 
 const LandingPage = () => {
 
@@ -38,60 +39,42 @@ useEffect(() => {
   
   return (
     <div>
-      <div className="top-line">
-        <div className="container container-top">
-          <div>
-            <div className="logo">
-              <img src={img} alt="Logo"/>
-            </div>
-          </div>
-          <div>
-            <ul className="main-mnu">
-              <li><a href="#">About</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contacts</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       <Swiper className="slider" onSwiper={(swiper) => (swiperRef.current = swiper)}
-  onSlideChange={() => console.log('slide change')}
-  modules={[Mousewheel]}
-  mousewheel={true} >
+        onSlideChange={() => console.log('slide change')}
+        modules={[Mousewheel]}
+        mousewheel={true} >
         <SwiperSlide className="slide">
           <div className="slide__content">
-            <h2>Abstract</h2>
-            <p>Designing for the future</p>
-            <button>Join Us</button>
+            <h2>about</h2>
+            <p>let's get acquainted</p>
+            <button>more</button>
           </div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
-					<h2>Design</h2>
-					<p>Designing for the future</p>
-					<button>Join Us</button>
+					<h2>certificates</h2>
+					<p>take a look at my certificates</p>
+					<button>more</button>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
-					<h2>Design</h2>
-					<p>Designing for the future</p>
-					<button>Join Us</button>
+					<h2>experience</h2>
+					<p>take a look at my experience</p>
+					<button>more</button>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
-					<h2>Design</h2>
-					<p>Designing for the future</p>
-					<button>Join Us</button>
+					<h2>projects</h2>
+					<p>real world and pet projects</p>
+					<button>more</button>
 				</div>
         </SwiperSlide>
 
       </Swiper>
 
-      <video ref={videoRef} src={video} className="video-background" muted autoPlay ></video>
+      <video ref={videoRef} src={video} className="video-background" muted ></video>
     </div>
   );
 };
