@@ -36,7 +36,6 @@
 	opacity: 1;
 }
 .slide__content h2 {
-	font-size: calc(var(--index) * 4);
 	text-transform: uppercase;
 	letter-spacing: calc(var(--index) * 1.65);
 	margin-bottom: calc(var(--index) * 2.3);
@@ -98,7 +97,7 @@ button:hover {
 	}
 }
 	.slide__content h2 {
-	  font-size: calc(1.5rem + 2vw); 
+	  font-size: calc(1.5rem + 2vw);
 	}
  
 	.slide__content p {

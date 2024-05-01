@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
-import img from "../img/logo.svg";
 import video from "../media/background.mp4";
 import '../App.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -26,6 +25,7 @@ useEffect(() => {
           ease: "power2.out",
           onComplete: () => {
             videoRef.current.pause();
+            gsap.set(videoRef.current, {willChange: "true"});
           }
         });
       }
@@ -36,6 +36,20 @@ useEffect(() => {
       if (videoRef.current) videoRef.current.classList.remove('change');
     });
   }
+}, []);
+
+useEffect(() => {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        videoRef.current.src = video;
+      }
+    });
+  });
+
+  observer.observe(videoRef.current);
+
+  return () => observer.disconnect();
 }, []);
   
   return (
@@ -55,7 +69,7 @@ useEffect(() => {
 				<div className="slide__content">
 					<h2>certificates</h2>
 					<p>take a look at my certificates</p>
-					<Link><button>more</button></Link>
+					<Link to='/certificates'><button>more</button></Link>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">
@@ -75,7 +89,7 @@ useEffect(() => {
 
       </Swiper>
 
-      <video ref={videoRef} src={video} className="video-background" muted ></video>
+      <video ref={videoRef} className="video-background" muted ></video>
     </div>
   );
 };

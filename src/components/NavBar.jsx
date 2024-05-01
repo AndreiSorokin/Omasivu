@@ -18,9 +18,9 @@ const NavBar = () => {
           <div>
             <ul className="main-mnu">
               <li><Link to='/about'>about</Link></li>
-              <li><a href="#">certificates</a></li>
+              <li><Link to='/certificates'>certificates</Link></li>
               <li><a href="#">experience</a></li>
-              <li><a href="#">projects</a></li>
+              <li><a href="#">skills</a></li>
             </ul>
           </div>
         </div>
