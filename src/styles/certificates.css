@@ -3,18 +3,8 @@
 	--gutter: 30px;
 	--side-small: 26;
 	--side-big: 36;
-	--depth: 4000px;
+	--depth: 1950px;
 	--transition: .75s cubic-bezier(.075, .5, 0, 1)
-}
-
-.certificates {
-	scrollbar-width: none;
-   margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-.certificates::-webkit-scrollbar { 
-	display: none;
 }
 
 @font-face {
@@ -27,15 +17,21 @@
 	src: url(../fonts/raleway-v22-cyrillic-100.woff2);
 	font-weight: 100;
 }
+
 .certificates {
+	scrollbar-width: none;
+   margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	background-color: #000;
 	color: #fff;
 	font-size: calc(var(--index) * .8);
 	font-family: raleway_c, sans-serif;
 	line-height: 1.75;
-	height: var(--depth);
+	min-height: var(--depth);
 	font-weight: 300;
 }
+
 .container-certificates {
 	width: 100%;
 	height: 100%;
@@ -56,24 +52,27 @@
 	transition: var(--transition), opacity .75s ease;
 	will-change: transform;
 	transform-style: preserve-3d;
+	flex-direction: column;
 }
-.frame {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.frame__content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
-.frame__content--left, .frame__content--right {
-   width: 50%;
-}
+
 .certificates-header, h3 {
-	font-weight: 100;
+	font-weight: 300;
 	text-transform: uppercase;
 	width: min-content;
 	line-height: 1;
+	background: linear-gradient(99deg, rgb(255, 166, 0) 14.7%, rgb(255, 99, 97) 73%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .frame h2 {
-	text-align: center;
 	font-size: calc(var(--index) * 3.3);
 }
 .frame-media {
@@ -89,17 +88,28 @@
 .frame-media_right {
 	left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
 }
+.frame-media, .frame-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.frame-text {
+	margin-top: 20px;
+}
+
+
 .frame_bg {
 	background-color: rgb(0 0 0 / .87);
 }
 .text-right > * {
 	position: relative;
-	left: 18vw;
+	left: 20vw;
    text-align: right;
 }
 .text-left > * {
 	position: relative;
-	right: 18vw;
+	right: 20vw;
    text-align: left;
 }
 .frame h3 {
@@ -108,6 +118,11 @@
 .frame p {
 	max-width: 30vw;
 	margin-top: 3vh;
+	font-weight: 300;
+	text-align: center;
+}
+.frame__content h2, .frame__content p {
+	 margin-top: 50px;
 }
 
 @media (max-width: 768px) {
@@ -125,6 +140,12 @@
 
 	 .frame p {
 		  max-width: 50vw;
+	 }
+	 .text-left > * {
+
+	 }
+	 .text-right > *{
+
 	 }
 }
 @media (max-width: 768px) {

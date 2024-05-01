@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import "../styles/certificates.css";
 import firstCertificate from "../img/certificate-fullstack.png";
+import diploma from "../img/diploma.jpg"
 
 export default function Certificates() {
     const [lastPos, setLastPos] = useState(window.innerHeight / 5);
@@ -45,30 +46,37 @@ export default function Certificates() {
     };
 
     return (
-        <div className='certificates'>
-            <div className="container-certificates">
-                <section className="gallery">
-                    <div className="frame" ref={addFrameRef}>
-    <div className="frame__content frame__content--left">
-        <div className="frame-media frame-media_left" style={{backgroundImage: `url(${firstCertificate})`}}></div>
-    </div>
-    <div className="frame__content frame__content--right">
-        <h2 className='certificates-header'>Beautiful World</h2>
-        <p>Description or additional text here</p>
-    </div>
-</div>
-
-                    <div className="frame" ref={addFrameRef}>
-                        <div className="frame__content">
-                            <div className="frame-media frame-media left" style={{backgroundImage: `url(${firstCertificate})`}}></div>
+    <div className='certificates'>
+        <div className="container-certificates">
+            <section className="gallery">
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">
+                        <div className="frame-media frame-media_left" style={{backgroundImage: `url(${diploma})`}}></div>
+                        <div className="frame-text" ref={addFrameRef}>
+                            <div className="text-left">
+                                <h2 className='certificates-header'>Diploma</h2>
+                                <p>University Bachelor's Degree</p>
+                            </div>
                         </div>
                     </div>
-
-                    <div className="frame" ref={addFrameRef}>
-                        <div className="frame__content">© WebDesign Master</div>
+                </div>
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">
+                        <div className="frame-media frame-media_right" style={{backgroundImage: `url(${firstCertificate})`}}></div>
+                        <div className="frame-text" ref={addFrameRef}>
+                            <div className="text-right">
+                                <h2 className='certificates-header'>Certificate</h2>
+                                <p>University of Helsinki main Course Certificate</p>
+                            </div>
+                        </div>
                     </div>
-                </section>
-            </div>
+                </div>
+                
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">More certificates coming soon... :)</div>
+                </div>
+            </section>
         </div>
+    </div>
     );
 }
