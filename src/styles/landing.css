@@ -13,9 +13,10 @@
 	--swiper-pagination-bullet-inactive-color: #36373c;
 	--swiper-pagination-bullet-inactive-opacity: 1;
 }
-body {
+.landing {
 	background-color: #000;
 	color: #fff;
+	font-size: calc(0.5rem + 1vw);
 }
 .slider {
 	height: 100vh;
@@ -40,6 +41,7 @@ body {
 	letter-spacing: calc(var(--index) * 1.65);
 	margin-bottom: calc(var(--index) * 2.3);
 	position: relative;
+	font-size: calc(2rem + 1vw);
 }
 .slide__content h2::after {
 	content: '';
@@ -56,6 +58,7 @@ body {
 	color: rgba(255 255 255 / .8);
 	letter-spacing: calc(var(--index) * .24);
 	margin-bottom: calc(var(--index) * 2.6);
+	font-size: calc(1rem + 0.5vw);
 }
 button {
 	--button-color: rgba(255 255 255 / .9);
@@ -68,12 +71,12 @@ button {
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	cursor: pointer;
+	padding: 0.5rem 2rem;
+  font-size: calc(0.8rem + 0.5vw); 
 }
-.slider-navigation > * {
-	border: 1.5px solid var(--swiper-theme-color);
-	border-radius: 10em;
-	width: 55px;
-	height: 55px;
+button:hover {
+	scale: 1.05;
+	transition: .2s ease;
 }
 .video-background {
 	position: fixed;
@@ -89,53 +92,31 @@ button {
 	opacity: 1;
 }
 
-/* Interface */
-
-.container {
-	margin: auto;
-	max-width: 840px;
+@media (max-width: 768px) {
+	:root {
+	  --index: 0.4rem;
+	}
 }
-.container-top {
-	display: flex;
-	justify-content: space-between;
-}
-.top-line {
-	position: absolute;
-	width: 100%;
-	z-index: 10;
-	padding: 1.7rem 0;
-}
-.logo {
-	border: 3px solid #E1E6F7;
-	border-radius: 10em;
-	width: 54px;
-	height: 54px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	opacity: .75;
-}
-.logo img{
-	width: 25px;
-	height: auto;
-}
-.main-mnu {
-	display: flex;
-	margin-top: 15px;
-	font-size: 19px;
-	margin-right: -16px;
-}
-.main-mnu li {
-	list-style: none;
-}
-.main-mnu a {
-	color: #bbbec9;
-	padding: 16px;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	text-decoration: none;
-	font-weight: 200;
-	outline: none;
-}
-.main-mnu a:hover {
-	text-decoration: underline;
-}
+	.slide__content h2 {
+	  font-size: calc(1.5rem + 2vw); 
+	}
+ 
+	.slide__content p {
+	  font-size: calc(0.9rem + 1vw); 
+ 
+	button {
+	  padding: 0.5rem 1.5rem;
+	  font-size: calc(0.7rem + 1vw);
+	}
+ 
+	.video-background {
+	  width: 100%;
+	  height: auto;
+	}
+ }
+ 
+ @media (max-width: 480px) {
+	.container {
+	  padding: 0 20px; 
+	}
+ }

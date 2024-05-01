@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom'
 import { gsap } from 'gsap';
 import img from "../img/logo.svg";
 import video from "../media/background.mp4";
@@ -38,7 +39,7 @@ useEffect(() => {
 }, []);
   
   return (
-    <div>
+    <div className='landing'>
       <Swiper className="slider" onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={() => console.log('slide change')}
         modules={[Mousewheel]}
@@ -46,15 +47,15 @@ useEffect(() => {
         <SwiperSlide className="slide">
           <div className="slide__content">
             <h2>about</h2>
-            <p>let's get acquainted</p>
-            <button>more</button>
+            <p>Full Stack developer with passion to challenges</p>
+            <Link to='/about'><button>more</button></Link>
           </div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
 					<h2>certificates</h2>
 					<p>take a look at my certificates</p>
-					<button>more</button>
+					<Link><button>more</button></Link>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">

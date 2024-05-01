@@ -1,0 +1,19 @@
+.about {
+   background-color: #000;
+	color: #fff;
+	font-size: calc(0.5rem + 1vw);
+   min-height: 100vh;
+}
+.wrapper {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+}
+p {
+   letter-spacing: calc(5px);
+	margin-top: calc(20vh);
+   font-size: calc(var(--index) * 2);
+   text-align: center;
+   width: 50vw;
+}

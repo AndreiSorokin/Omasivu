@@ -42,3 +42,18 @@
 .main-mnu a:hover {
 	text-decoration: underline;
 }
+.container {
+	margin: auto;
+	max-width: 840px;
+}
+
+@media (max-width: 480px) {
+	.main-mnu {
+	  flex-direction: column;
+	  align-items: center;
+	}
+ 
+	.main-mnu li + li {
+	  margin-top: 10px;
+	}
+ }
