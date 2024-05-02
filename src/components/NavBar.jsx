@@ -19,7 +19,7 @@ const NavBar = () => {
             <ul className="main-mnu">
               <li><Link to='/about'>about</Link></li>
               <li><Link to='/certificates'>certificates</Link></li>
-              <li><a href="#">experience</a></li>
+              <li><Link to='/experience'>experience</Link></li>
               <li><a href="#">skills</a></li>
             </ul>
           </div>

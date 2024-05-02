@@ -76,12 +76,12 @@ useEffect(() => {
 				<div className="slide__content">
 					<h2>experience</h2>
 					<p>take a look at my experience</p>
-					<button>more</button>
+					<Link to='/experience'><button>more</button></Link>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
-					<h2>projects</h2>
+					<h2>skills</h2>
 					<p>real world and pet projects</p>
 					<button>more</button>
 				</div>
