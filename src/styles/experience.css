@@ -52,7 +52,7 @@ body {
 }
 .portfolio__gallery {
 	display: flex;
-	padding: calc(var(--index) * 8) 0;
+	flex-direction: column;
 }
 .portfolio__gallery > * {
 	flex: 1;
@@ -81,14 +81,34 @@ body {
 	font-size: 2rem;
 	line-height: 2.4rem;
 	color: var(--color-header);
-	margin-bottom: 1.5rem;
+	margin-bottom: -60px;
+	transform: translate(3vw, 10vh);
+	display: inline-block;
 }
 .text-block__p {
 	line-height: 1.75;
+	font-size: 1rem;
+	width: 300px;
+}
+
+.gallery__right, .gallery__left {
+  display: flex;
+  flex-direction: row; /* This aligns children (image and text) side by side */
+  justify-content: space-between; /* Adjust as needed for spacing */
+}
+
+.mobile {
+	display: none;
 }
 
 
 @media (max-width: 768px) {
+	.pc {
+		display: none;
+	}
+	.mobile {
+		display: inline-block;
+	}
 	 .hero {
 		  width: calc(var(--index) * 28);
 		  left: 50%;
