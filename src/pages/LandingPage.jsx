@@ -60,29 +60,29 @@ useEffect(() => {
         mousewheel={true} >
         <SwiperSlide className="slide">
           <div className="slide__content">
-            <h2>about</h2>
-            <p>Full Stack developer with passion to challenges</p>
+            <h2 className='header'>about</h2>
+            <p className='text'>Full Stack developer with passion to challenges</p>
             <Link to='/about'><button>more</button></Link>
           </div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
-					<h2>certificates</h2>
-					<p>take a look at my certificates</p>
+					<h2 className='header'>certificates</h2>
+					<p className='text'>take a look at my certificates</p>
 					<Link to='/certificates'><button>more</button></Link>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
-					<h2>experience</h2>
-					<p>take a look at my experience</p>
+					<h2 className='header'>experience</h2>
+					<p className='text'>take a look at my experience</p>
 					<Link to='/experience'><button>more</button></Link>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
-					<h2>skills</h2>
-					<p>real world and pet projects</p>
+					<h2 className='header'>skills</h2>
+					<p className='text'>real world and pet projects</p>
 					<button>more</button>
 				</div>
         </SwiperSlide>

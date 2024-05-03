@@ -55,7 +55,7 @@ export default function Certificates() {
                         <div className="frame-text" ref={addFrameRef}>
                             <div className="text-left">
                                 <h2 className='certificates-header'>Diploma</h2>
-                                <p>University Bachelor's Degree</p>
+                                <p className='certificates__p'>University Bachelor's Degree</p>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ export default function Certificates() {
                         <div className="frame-text" ref={addFrameRef}>
                             <div className="text-right">
                                 <h2 className='certificates-header'>Certificate</h2>
-                                <p>University of Helsinki main Course Certificate</p>
+                                <p className='certificates__p'>University of Helsinki main Course Certificate</p>
                             </div>
                         </div>
                     </div>
