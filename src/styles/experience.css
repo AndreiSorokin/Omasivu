@@ -8,6 +8,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 @font-face {
 	font-family: raleway-c;
@@ -101,6 +102,10 @@ body {
 	display: none;
 }
 
+.helsinki {
+	width: 300px;
+	height: 300px;
+}
 
 @media (max-width: 768px) {
     .pc {
