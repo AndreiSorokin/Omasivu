@@ -83,7 +83,7 @@ useEffect(() => {
 				<div className="slide__content">
 					<h2 className='header'>skills</h2>
 					<p className='text'>real world and pet projects</p>
-					<button>more</button>
+					<Link to='/skills'><button>more</button></Link>
 				</div>
         </SwiperSlide>
 

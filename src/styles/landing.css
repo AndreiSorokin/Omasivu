@@ -3,6 +3,10 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+@font-face {
+	font-family: raleway-c;
+	src: url(../fonts/raleway-regular.woff2);
+}
 :root {
 	--index: calc(1vw + 1vh);
 	--swiper-theme-color: #4b4d53;
@@ -17,6 +21,10 @@
 	background-color: #000;
 	color: #fff;
 	font-size: calc(0.5rem + 1vw);
+}
+button {
+	font-family: raleway-c;
+
 }
 .slider {
 	height: 100vh;
@@ -41,6 +49,8 @@
 	margin-bottom: calc(var(--index) * 2.3);
 	position: relative;
 	font-size: calc(2rem + 1vw);
+	font-family: raleway-c;
+
 }
 .slide__content h2::after {
 	content: '';
@@ -62,7 +72,6 @@
 button {
 	--button-color: rgba(255 255 255 / .9);
 	padding: 9.25px 40px;
-	font-size: 15.75px;
 	border-radius: 10em;
 	background-color: transparent;
 	border: 2px solid var(--button-color);
@@ -71,7 +80,7 @@ button {
 	letter-spacing: .2rem;
 	cursor: pointer;
 	padding: 0.5rem 2rem;
-  font-size: calc(0.8rem + 0.5vw); 
+	font-size: calc(0.8rem + 0.5vw); 
 }
 button:hover {
 	scale: 1.05;

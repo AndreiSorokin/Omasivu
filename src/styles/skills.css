@@ -7,21 +7,44 @@
     background-color: black;
     min-height: 100vh;
     overflow: hidden;
+}
+
+.skills__header:nth-child(1) {
+    padding: 30vh 0 10vh 0;
+}
+
+.skills__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10vh 0;
+    color: #ddd;
+    font-weight: 300;
+    text-transform: uppercase;
+	line-height: 1;
+}
+
+.skills-section{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
-    padding: 20px;
+    padding: 0 20vw;
     justify-items: center;
-    align-items: center; /* Added to vertically center items */
-    justify-content: center; /* Added to horizontally center the grid */
+    align-items: center;
+}
+
+.skills-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
 }
 
 .skill {
     margin-bottom: 20px;
     width: 100%;
-    display: flex; /* Make skill a flex container */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center children horizontally */
+    align-items: center;
+    justify-content: center;
 }
 
 .skill-name {
@@ -29,7 +52,7 @@
     margin-bottom: 5px;
     font-family: raleway-c;
     color: #ddd;
-    text-align: center; /* Ensure text is centered */
+    text-align: center;
 }
 
 .progress {
@@ -41,36 +64,28 @@
 .progress-bar {
     background-color: #4CAF50;
     height: 20px;
-    width: 100%;
+    width: 200px;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start;
     padding-left: 5px;
-    color: white;
+    color: #ddd;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .skills {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .skills {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .skills {
+@media (max-width: 768px) {
+    .skills-section {
         grid-template-columns: repeat(2, 1fr);
+        padding: 0 5vw;
+    }
+
+    .skill-name {
+        font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (768 - 300)));
     }
 }
 
-@media (max-width: 400px) {
-    .skills {
+@media (max-width: 480px) {
+    .skills-section {
         grid-template-columns: 1fr;
     }
 }

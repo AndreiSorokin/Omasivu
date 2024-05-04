@@ -63,7 +63,7 @@
 	justify-content: center;
 }
 
-.certificates-header, h3 {
+.certificates-header {
 	font-weight: 300;
 	text-transform: uppercase;
 	width: min-content;
@@ -72,7 +72,7 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-.frame h2 {
+.certificates-header {
 	font-size: calc(var(--index) * 3.3);
 }
 .frame-media {
@@ -121,7 +121,7 @@
 	font-weight: 300;
 	text-align: center;
 }
-.frame__content h2, .frame__content p {
+.certificates-header, .frame__content p {
 	 margin-top: 50px;
 }
 
@@ -130,7 +130,7 @@
 		  --index: calc(0.9vw + 0.9vh);
 	 }
 
-	 .frame h2 {
+	 .certificates-header {
 		  font-size: calc(var(--index) * 2.5);
 	 }
 

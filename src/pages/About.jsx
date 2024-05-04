@@ -5,20 +5,16 @@ const About = () => {
   return (
     <div className='about'>
       <div className="wrapper">
-        <p>Hello, I am a junior full stack developer from Helsinki and I came to this field from civil aviation.
+        <p>Hello, I am a junior full-stack developer from Helsinki, originally from Russia, who transitioned from civil aviation to this field.
           <br/>
           <br/>
-          I am originally from Russia and have come a long way here.
+          My journey began when I realized my passion for programming while studying at a Civil Aviation University. Feeling the need for more freedom and opportunities, I decided to pursue programming further. Recognizing the global demand for IT specialists, I enrolled at Bauman Moscow State University to delve into programming.
           <br/>
           <br/>
-          I am originally from Russia and have come a long way here. 
-          When I studied at a Civil aviation university I realized that I am interested in programming and started dedicating my time to learning it. Also I realized that I want to have more freedom and opportunities to grow which that country couldn’t give me and since IT specialists are in demand all around the globe I decided to switch the field of study and enter Bauman Moscow State university to learn programming. During the program I started searching different countries to move to and choose Finland. Initially I didn’t have money to afford to move here and I decided to apply to a university in Estonia in order to move here from there.
-          In order to enter the university in Estonia I needed to pass IELTS exam and even though I hadn’t known any English before, I spent few months actively learning the language and made the thing that had seemed to be impossible- got B2 level in just a few months.
+          During my studies, I explored various countries to relocate to and ultimately chose Finland. Initially lacking the funds to move directly, I applied to a university in Estonia as a stepping stone. This required me to pass the IELTS exam, despite having no prior knowledge of English. Determined, I dedicated several months to learning the language and achieved a B2 level in a remarkably short time.
           <br/>
-          After I have successfully passed the IELTS exam I entered the university where I studied software engineering and entrepreneurship.
           <br/>
-          And with this long journey behind I’m finally here.
-        </p>
+          Having successfully completed the IELTS exam, I pursued a degree in software engineering and entrepreneurship at the university in Estonia. After this long and arduous journey, I find myself here in Helsinki, ready to embark on the next chapter of my career as a developer.        </p>
       </div>
     </div>
   )
