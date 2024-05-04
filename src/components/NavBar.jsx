@@ -20,7 +20,7 @@ const NavBar = () => {
               <li><Link to='/about'>about</Link></li>
               <li><Link to='/certificates'>certificates</Link></li>
               <li><Link to='/experience'>experience</Link></li>
-              <li><a href="#">skills</a></li>
+              <li><Link to='/skills'>skills</Link></li>
             </ul>
           </div>
         </div>

@@ -24,7 +24,7 @@
 .experience__content, .hero, .main-header, .portfolio__gallery > * {
 	will-change: transform;
 }
-body {
+.experience {
 	background-image: url(../img/bg.jpg);
 	background-size: 50px;
 	color: #fafafa;

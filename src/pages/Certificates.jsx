@@ -9,7 +9,7 @@ export default function Certificates() {
     const zVals = useRef([]);
 
     useEffect(() => {
-        const zSpacing = -1000;
+        const zSpacing = -800;
         if (framesRef.current.length > 0 && zVals.current.length === 0) {
             zVals.current = framesRef.current.map((_, i) => (i * zSpacing) + zSpacing);
         }

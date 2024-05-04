@@ -10,6 +10,7 @@ import Contact from './pages/Contact'
 import NavBar from './components/NavBar'
 import Certificates from './pages/Certificates'
 import Experience from './pages/Experience';
+import Skills from './pages/Skills';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
     </div>
   )
