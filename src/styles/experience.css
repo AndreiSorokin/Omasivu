@@ -63,7 +63,7 @@
 }
 .gallery__item {
 	max-width: calc(var(--index) * 21);
-	margin-bottom: var(--gallery-gap);
+	margin-bottom: 5vh;
 	max-height: 180vh;
 	border-radius: 8px;
 }
@@ -83,8 +83,8 @@
 	line-height: 2.4rem;
 	color: var(--color-header);
 	margin-bottom: -60px;
-	transform: translate(3vw, 10vh);
-	display: inline-block;
+	display: flex;
+	justify-content: center;
 	background: linear-gradient(99deg, rgb(255, 166, 0) 14.7%, rgb(255, 99, 97) 73%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -94,7 +94,9 @@
 .text-block__p {
 	line-height: 1.75;
 	font-size: 1rem;
-	width: 300px;
+	width: 400px;
+	display: flex;
+	justify-content: center;
 }
 
 .gallery__right, .gallery__left {

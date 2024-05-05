@@ -21,14 +21,14 @@ const Experience = () => {
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalImages) {
-          setImagesLoaded(true); // Set state to true when all images are loaded
+          setImagesLoaded(true);
         }
       };
       img.onerror = img.onload;
     });
 
     if (totalImages === 0) {
-      setImagesLoaded(true); // No images to load
+      setImagesLoaded(true);
     }
   }, []);
 
@@ -58,7 +58,7 @@ const Experience = () => {
     // });
 
     const animateGalleryItems = (selector, direction = 'left') => {
-      const xOffset = direction === 'left' ? '-100%' : '100%'; // Adjust starting position based on direction
+      const xOffset = direction === 'left' ? '-100%' : '100%';
       gsap.utils.toArray(selector).forEach(item => {
         gsap.fromTo(item, { x: xOffset, opacity: 0 }, {
           x: '0%', opacity: 1, scrollTrigger: {
@@ -169,7 +169,7 @@ const Experience = () => {
             <div data-speed=".1" className="gallery__right">
 							<div className="text-block gallery__item">
               <h2 className="text-block__h">University of Helsinki</h2>
-					  	<p className="text-block__p">Open online course on JavaScript based modern web development by University of Helsinki and Houston Inc..<br/>While my journey in university of Helsinki courses I was learning new topics and practice knowledge I had already had and making time management in order to be able to combine this course with integrify</p>
+					  	<p className="text-block__p text-helsinki">Open online course on JavaScript based modern web development by University of Helsinki and Houston Inc..<br/>While my journey in university of Helsinki courses I was learning new topics and practice knowledge I had already had and making time management in order to be able to combine this course with integrify</p>
 							</div>
 							<img className="gallery__item helsinki" src={helsinki} alt="Alt"/>
 						</div>
