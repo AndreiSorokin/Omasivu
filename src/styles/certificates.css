@@ -64,6 +64,7 @@
 }
 
 .certificates-header {
+	font-size: calc(var(--index) * 3.3);
 	font-weight: 300;
 	text-transform: uppercase;
 	width: min-content;
@@ -71,10 +72,10 @@
 	background: linear-gradient(99deg, rgb(255, 166, 0) 14.7%, rgb(255, 99, 97) 73%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	display: flex;
+	justify-content: center;
 }
-.certificates-header {
-	font-size: calc(var(--index) * 3.3);
-}
+
 .frame-media {
 	position: relative;
 	width: calc(var(--index) * var(--side-small));
@@ -93,6 +94,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 .frame-text {
 	margin-top: 20px;
@@ -105,21 +107,25 @@
 .text-right > * {
 	position: relative;
 	left: 20vw;
-   text-align: right;
+   text-align: center;
+	display: flex;
+	justify-content: center;
 }
 .text-left > * {
 	position: relative;
 	right: 20vw;
-   text-align: left;
+   text-align: center;
+	display: flex;
+	justify-content: center;
 }
 .frame h3 {
 	font-size: calc(var(--index) * 3);
 }
 .frame p {
-	max-width: 30vw;
-	margin-top: 3vh;
-	font-weight: 300;
-	text-align: center;
+	width: auto;
+   max-width: 25vw;
+   text-align: center;
+   margin: 20px auto 0;
 }
 .certificates-header, .frame__content p {
 	 margin-top: 50px;
@@ -139,25 +145,23 @@
 	 }
 
 	 .frame p {
-		  max-width: 50vw;
-	 }
-	 .text-left > * {
-
-	 }
-	 .text-right > *{
-
-	 }
+		max-width: 80%;
+  	}
+	.text-left > * {
+		padding: 0 15%;
+  }
+  .text-right > * {
+	padding: 0 50%;
+  }
+  .certificates__p-left {
+	transform: translate(-100px, 0);
+  }
+  .certificates__p-right {
+	transform: translate(120px, 0);
+  }
+  .frame-media_left, .frame-media_right {
+	margin: 0 auto;
 }
-@media (max-width: 768px) {
-    .text-right > *, .text-left > * {
-        position: relative;
-        padding: 0 5%;
-    }
-
-    .frame-media_left, .frame-media_right {
-        margin: 0 auto;
-        max-width: 90%;
-    }
 }
 
 @media (max-width: 480px) {
@@ -168,4 +172,16 @@
         align-items: center;
         justify-content: center;
     }
+	 .text-left > * {
+		padding: 0;
+  }
+  .text-right > * {
+	padding: 0 55%;
+  }
+  .certificates__p-left {
+	transform: translate(-120px, 0);
+  }
+  .certificates__p-right {
+	transform: translate(100px, 0);
+  }
 }

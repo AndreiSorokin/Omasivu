@@ -90,6 +90,7 @@
 	-webkit-text-fill-color: transparent;
 	text-transform: uppercase;
 	line-height: 1;
+	font-family: "Lora", serif;
 }
 .text-block__p {
 	line-height: 1.75;
@@ -132,6 +133,9 @@
     .portfolio__gallery {
         flex-direction: column;
     }
+	 .portfolio__gallery > :last-child {
+		margin-bottom: 20vh;
+	 }
     .gallery__item {
         max-width: 90%;
     }
@@ -141,8 +145,12 @@
     .text-block__h {
         font-size: 1.5rem;
     }
+	 .text-block__h:nth-child(odd) {
+		margin-top: 10vh;
+	 }
     .text-block__p {
         font-size: 0.9rem;
+		  width: 300px;
     }
     .gallery__left, .gallery__right {
         flex-direction: column;

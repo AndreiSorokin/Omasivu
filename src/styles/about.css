@@ -10,6 +10,29 @@
    justify-content: center;
    height: 100%;
 }
+.links {
+   padding-top: 20vh;
+}
+.git {
+   width: 50px;
+   height: 50px;
+}
+.li {
+   width: 50px;
+   height: 50px;
+}
+/* .intro {
+   display: flex;
+}
+.image-container {
+   width: 150px;
+   height: 150px;
+}
+.me {
+   width: 150px;
+   height: 150px;
+   display: block;
+} */
 p {
    letter-spacing: calc(5px);
 	margin-top: calc(20vh);

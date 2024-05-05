@@ -1,11 +1,24 @@
 import React from 'react'
 import "../styles/about.css"
+import Me from "../img/Me.png"
+import git from "../img/git.png"
+import li from "../img/li.png"
 
 const About = () => {
   return (
     <div className='about'>
-      <div className="wrapper">
-        <p>Hello, I am a junior full-stack developer from Helsinki, originally from Russia, who transitioned from civil aviation to this field.
+      {/* <div className="intro">
+      <div className="image-container">
+        <img className='me' src={Me} alt="" />
+      </div>
+      <p>Hello, I am a junior full-stack developer based in Helsinki, originally from Russia, who transitioned from civil aviation to this field.</p>
+      </div> */}
+        <div className="links">
+          <a href="https://github.com/AndreiSorokin" target="_blank"><img className='git' src={git} alt="GitHub" /></a>
+          <a href="https://www.linkedin.com/in/andrei-sorokin-727546235/" target='_blank'><img className='li' src={li} alt="in"/></a>
+        </div>        
+        <div className="wrapper">
+        <p>Hello, I am a junior full-stack developer based in Helsinki, originally from Russia, who transitioned from civil aviation to this field.
           <br/>
           <br/>
           My journey began when I realized my passion for programming while studying at a Civil Aviation University. Feeling the need for more freedom and opportunities, I decided to pursue programming further. Recognizing the global demand for IT specialists, I enrolled at Bauman Moscow State University to delve into programming.
