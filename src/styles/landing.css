@@ -70,6 +70,57 @@ button {
 	margin-bottom: calc(var(--index) * 2.6);
 	font-size: calc(1rem + 0.5vw);
 }
+
+.swiper-container {
+  position: relative;
+}
+
+.slider-bottom {
+	position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50vh;
+  z-index: 10;
+}
+
+.slider-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.swiper-button-prev, .swiper-button-next {
+	margin: 0 10vw;
+	width: 55px;
+	height: 55px;
+	position: relative;
+ }
+
+.swiper-button-prev::before, .swiper-button-next::before {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-top: 2px solid var(--swiper-theme-color);
+	border-right: 2px solid var(--swiper-theme-color);
+	position: absolute;
+	top: 40%;
+ }
+ 
+ .swiper-button-prev::before {
+	left: 23px;
+	transform: rotate(-135deg);
+ }
+ 
+ .swiper-button-next::before {
+	right: 23px;
+	transform: rotate(45deg);
+ }
 button {
 	--button-color: rgba(255 255 255 / .9);
 	padding: 9.25px 40px;
@@ -96,14 +147,25 @@ button:hover {
 	transform: translate(-50%, -50%);
 	opacity: .7;
 	transition: opacity 2s ease-out;
+	z-index: 0;
 }
 .video-background.change {
 	opacity: 1;
 }
+.slider-navigation > * {
+	border: 1.5px solid var(--swiper-theme-color);
+	border-radius: 10em;
+	width: 55px;
+	height: 55px;
+}
+
 
 @media (max-width: 768px) {
 	:root {
 	  --index: 0.4rem;
+	}
+	.header {
+		margin-bottom: -120px;
 	}
 	button {
 		padding: 0.5rem 1.5rem;
@@ -144,4 +206,7 @@ button:hover {
 		opacity: .7;
 		transition: opacity 2s ease-out;
 	}
+	.swiper-button-prev, .swiper-button-next {
+		margin: 0 2vw;
+	 }
  }

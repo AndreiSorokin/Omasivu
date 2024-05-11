@@ -47,6 +47,15 @@
 	max-width: 840px;
 }
 
+@media(max-width: 768px) {
+	.main-mnu {
+		margin-right: 16px;
+	}
+	.logo {
+		margin-left: 36px;
+	}
+}
+
 @media (max-width: 480px) {
 	.main-mnu {
 	  flex-direction: column;

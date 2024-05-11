@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import video from "../media/background.mp4";
 import '../App.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Mousewheel } from 'swiper/modules';
+import { Mousewheel, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import '../styles/landing.css'
 
@@ -22,7 +22,7 @@ useEffect(() => {
         gsap.to(videoRef.current, {
           currentTime: targetTime,
           duration: 1.6,
-          ease: "power2.out",
+          ease: "power2.easeOut",
           onComplete: () => {
             videoRef.current.pause();
             gsap.set(videoRef.current, {willChange: "true"});
@@ -54,10 +54,17 @@ useEffect(() => {
   
   return (
     <div className='landing'>
-      <Swiper className="slider" onSwiper={(swiper) => (swiperRef.current = swiper)}
-        onSlideChange={() => console.log('slide change')}
-        modules={[Mousewheel]}
-        mousewheel={true} >
+      <Swiper className="slider"  onSwiper={(swiper) => (swiperRef.current = swiper)}
+        modules={[Mousewheel, Navigation, Pagination]}
+        mousewheel={true}
+        navigation={{
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+        }}
+        pagination={{
+          el: '.swiper-pagination',
+          clickable: true,
+        }} >
         <SwiperSlide className="slide">
           <div className="slide__content">
             <h2 className='header'>about</h2>
@@ -87,9 +94,19 @@ useEffect(() => {
 				</div>
         </SwiperSlide>
 
+        <div className="slider-bottom">
+			    <div className="slider-pagination">
+			    	<div className="swiper-pagination"></div>
+			    </div>
+			    <div className="slider-navigation">
+			    	<div className="swiper-button-prev"></div>
+			    	<div className="swiper-button-next"></div>
+			    </div>
+		    </div>
+
       </Swiper>
 
-      <video ref={videoRef} className="video-background" muted ></video>
+      <video ref={videoRef} className="video-background" muted playsInline></video>    
     </div>
   );
 };

@@ -91,6 +91,8 @@
 	text-transform: uppercase;
 	line-height: 1;
 	font-family: "Lora", serif;
+	width: 110%;
+	transform: translate(-20px, 0);
 }
 .text-block__p {
 	line-height: 1.75;
@@ -114,6 +116,8 @@
 	width: 300px;
 	height: 300px;
 }
+
+
 
 @media (max-width: 768px) {
     .pc {
