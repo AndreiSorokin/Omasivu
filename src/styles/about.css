@@ -67,6 +67,6 @@ p {
    .me {
       width: 220px;
       height: 280px;
-      transform: translateY(3vh);
+      transform: translateY(9vh);
    }
 }

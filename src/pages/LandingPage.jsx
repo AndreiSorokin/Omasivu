@@ -75,21 +75,21 @@ useEffect(() => {
         <SwiperSlide className="slide">
 				<div className="slide__content">
 					<h2 className='header'>certificates</h2>
-					<p className='text'>take a look at my certificates</p>
+					<p className='text'>Gained certificates</p>
 					<Link to='/certificates'><button>more</button></Link>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
 					<h2 className='header'>experience</h2>
-					<p className='text'>take a look at my experience</p>
+					<p className='text'>Briefly about my experience</p>
 					<Link to='/experience'><button>more</button></Link>
 				</div>
         </SwiperSlide>
         <SwiperSlide className="slide">
 				<div className="slide__content">
 					<h2 className='header'>skills</h2>
-					<p className='text'>skill bars</p>
+					<p className='text'>Skill bars</p>
 					<Link to='/skills'><button>more</button></Link>
 				</div>
         </SwiperSlide>
