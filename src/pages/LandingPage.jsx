@@ -106,7 +106,7 @@ useEffect(() => {
 
       </Swiper>
 
-      <video ref={videoRef} className="video-background" muted playsInline></video>    
+      <video ref={videoRef} className="video-background" muted playsInline></video>
     </div>
   );
 };

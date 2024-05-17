@@ -2,9 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import "../styles/certificates.css";
 import firstCertificate from "../img/certificate-fullstack.png";
 import diploma from "../img/diploma.jpg"
+import graphQl from "../img/certificate-graphql.png";
 
 export default function Certificates() {
-    const [lastPos, setLastPos] = useState(window.innerHeight / 5);
+    const [lastPos, setLastPos] = useState(window.innerHeight / 9);
     const framesRef = useRef([]);
     const zVals = useRef([]);
 
@@ -67,6 +68,18 @@ export default function Certificates() {
                             <div className="text-right">
                                 <h2 className='certificates-header'>Certificate</h2>
                                 <p className='certificates__p-right'>University of Helsinki main Course Certificate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">
+                        <div className="frame-media frame-media_left" style={{backgroundImage: `url(${graphQl})`}}></div>
+                        <div className="frame-text" ref={addFrameRef}>
+                            <div className="text-left">
+                                <h2 className='certificates-header'>Certificate</h2>
+                                <p className='certificates__p-left ret'>University of Helsinki GrapgQL course certificate</p>
                             </div>
                         </div>
                     </div>
