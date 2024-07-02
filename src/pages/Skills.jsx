@@ -29,7 +29,7 @@ const Skills = () => {
       <div className="skill">
         <div className="skill-name">JavaScript</div>
         <div className="progress">
-          <div className="progress-bar" style={{width: "85%"}}></div>
+          <div className="progress-bar" style={{width: "100%"}}></div>
         </div>
       </div>
       <div className="skill">
@@ -47,7 +47,7 @@ const Skills = () => {
       <div className="skill">
         <div className="skill-name">Redux</div>
         <div className="progress">
-          <div className="progress-bar" style={{width: "100%"}}></div>
+          <div className="progress-bar" style={{width: "90%"}}></div>
         </div>
       </div>
       </div>
@@ -64,7 +64,13 @@ const Skills = () => {
       <div className="skill">
         <div className="skill-name">Java</div>
         <div className="progress">
-          <div className="progress-bar" style={{width: "25%"}}></div>
+          <div className="progress-bar" style={{width: "60%"}}></div>
+        </div>
+      </div>
+      <div className="skill">
+        <div className="skill-name">SpringBoot</div>
+        <div className="progress">
+          <div className="progress-bar" style={{width: "60%"}}></div>
         </div>
       </div>
       <div className="skill">
@@ -116,8 +122,13 @@ const Skills = () => {
       </div>
       
       <h3 className='skills__header'>Other</h3>
-
       <div className="skills-section">
+      <div className="skill">
+        <div className="skill-name">hibernate</div>
+        <div className="progress">
+          <div className="progress-bar" style={{width: "70%"}}></div>
+        </div>
+      </div>
       <div className="skill">
         <div className="skill-name">GraphQL</div>
         <div className="progress">

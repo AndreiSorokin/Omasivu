@@ -67,7 +67,6 @@
 .certificates-header {
 	font-size: calc(var(--index) * 3.3);
 	font-weight: 300;
-	text-transform: uppercase;
 	width: min-content;
 	line-height: 1;
 	background: linear-gradient(99deg, rgb(255, 166, 0) 14.7%, rgb(255, 99, 97) 73%);
@@ -79,7 +78,7 @@
 
 .frame-media {
 	position: relative;
-	width: calc(var(--index) * var(--side-small));
+	width: calc(var(--index) * var(--side-small) * 1.8);
 	height: calc(var(--index) * var(--side-big));
 	background-position: center;
 	background-size: cover;
@@ -102,7 +101,11 @@
 }
 
 .certificates__p-left, .certificates__p-right {
-	font-size: calc(var(--index) * 2.4); 
+	font-size: calc(var(--index) * 2.4);
+}
+
+.diploma {
+	width: calc(var(--index) * var(--side-small));
 }
 
 .frame_bg {
@@ -135,6 +138,12 @@
 	 margin-top: 50px;
 }
 
+@media (max-width: 1440px) {
+	.certificates-header-left {
+		transform: translate(-50px, 0);
+	}
+}
+
 @media (max-width: 1024px) {
 	.text-left > * {
 		padding: 0;
@@ -148,6 +157,9 @@
 	}
 	.certificates__p-right {
 		transform: translate(50px, 0);
+	}
+	.frame-media {
+		width: calc(var(--index) * var(--side-small) * 1.1);
 	}
 }
 
@@ -204,4 +216,10 @@
   .certificates__p-right {
 	transform: translate(100px, 0);
   }
+  .certificates-header-left {
+	transform: translate(-150px, 0);
+}
+.certificates-header-right {
+	transform: translate(50px, 0);
+}
 }
