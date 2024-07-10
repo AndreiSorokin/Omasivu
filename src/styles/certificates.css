@@ -73,7 +73,18 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	display: flex;
-	justify-content: center;
+}
+
+.certificates-header-diploma {
+	transform: translateX(-10px);
+}
+
+.certificates-header-integrify {
+	line-height: 1.2;
+}
+
+.certificates-header-helsinki {
+	width: 900px;
 }
 
 .frame-media {

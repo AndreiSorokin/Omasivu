@@ -4,6 +4,7 @@ import firstCertificate from "../img/certificate-fullstack.png";
 import diploma from "../img/diploma.jpg"
 import graphQl from "../img/certificate-graphql.png";
 import integrify from "../img/Integrify.png";
+import Java from "../img/Java.png";
 
 export default function Certificates() {
     const [lastPos, setLastPos] = useState(window.innerHeight / 9);
@@ -56,7 +57,27 @@ export default function Certificates() {
                         <div className="frame-media frame-media_left diploma" style={{backgroundImage: `url(${diploma})`}}></div>
                         <div className="frame-text" ref={addFrameRef}>
                             <div className="text-left">
-                                <h2 className='certificates-header certificates-header-left'>Diploma</h2>
+                                <h2 className='certificates-header certificates-header-left certificates-header-diploma'>Diploma</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">
+                        <div className="frame-media frame-media_right" style={{backgroundImage: `url(${integrify})`}}></div>
+                        <div className="frame-text" ref={addFrameRef}>
+                            <div className="text-right">
+                                <h2 className='certificates-header certificates-header-right certificates-header-integrify'>Integrify</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">
+                        <div className="frame-media frame-media_left" style={{backgroundImage: `url(${Java})`}}></div>
+                        <div className="frame-text" ref={addFrameRef}>
+                            <div className="text-left">
+                                <h2 className='certificates-header certificates-header-left'>Java</h2>
                             </div>
                         </div>
                     </div>
@@ -66,7 +87,7 @@ export default function Certificates() {
                         <div className="frame-media frame-media_right" style={{backgroundImage: `url(${firstCertificate})`}}></div>
                         <div className="frame-text" ref={addFrameRef}>
                             <div className="text-right">
-                                <h2 className='certificates-header certificates-header-right'>University of Helsinki main Course</h2>
+                                <h2 className='certificates-header certificates-header-right certificates-header-helsinki'>University of Helsinki main Course</h2>
                             </div>
                         </div>
                     </div>
@@ -78,17 +99,6 @@ export default function Certificates() {
                         <div className="frame-text" ref={addFrameRef}>
                             <div className="text-left">
                                 <h2 className='certificates-header certificates-header-left'>GraphQL</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="frame" ref={addFrameRef}>
-                    <div className="frame__content">
-                        <div className="frame-media frame-media_right" style={{backgroundImage: `url(${integrify})`}}></div>
-                        <div className="frame-text" ref={addFrameRef}>
-                            <div className="text-right">
-                                <h2 className='certificates-header certificates-header-right'>Integrify</h2>
                             </div>
                         </div>
                     </div>

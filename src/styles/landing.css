@@ -110,6 +110,7 @@ button {
 	border-right: 2px solid var(--swiper-theme-color);
 	position: absolute;
 	top: 40%;
+	transition: border-color 0.2s ease-in-out;
  }
  
  .swiper-button-prev::before {
@@ -121,6 +122,22 @@ button {
 	right: 23px;
 	transform: rotate(45deg);
  }
+ .swiper-button-prev:hover, .swiper-button-next:hover {
+	transform: scale(1.1);
+	border-color: rgba(255, 255, 255, 0.9);
+ }
+ 
+ .swiper-button-prev:hover::before, .swiper-button-next:hover::before {
+	border-color: rgba(255, 255, 255, 0.9);
+ }
+ 
+ .slider-navigation > * {
+	border: 1.5px solid var(--swiper-theme-color);
+	border-radius: 10em;
+	width: 55px;
+	height: 55px;
+ }
+ 
 button {
 	--button-color: rgba(255 255 255 / .9);
 	padding: 9.25px 40px;
