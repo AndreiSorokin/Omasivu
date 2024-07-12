@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
 import "../styles/certificates.css";
+import icon from "../source/icons8-scroll-90.png";
 import firstCertificate from "../img/certificate-fullstack.png";
 import diploma from "../img/diploma.jpg"
 import graphQl from "../img/certificate-graphql.png";
 import integrify from "../img/Integrify.png";
 import Java from "../img/Java.png";
+import ts from "../img/certificate-typescript.png";
 
 export default function Certificates() {
     const [lastPos, setLastPos] = useState(window.innerHeight / 9);
@@ -12,7 +14,7 @@ export default function Certificates() {
     const zVals = useRef([]);
 
     useEffect(() => {
-        const zSpacing = -500;
+        const zSpacing = -450;
         if (framesRef.current.length > 0 && zVals.current.length === 0) {
             zVals.current = framesRef.current.map((_, i) => (i * zSpacing) + zSpacing);
         }
@@ -47,6 +49,14 @@ export default function Certificates() {
             framesRef.current.push(el);
         }
     };
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    });
 
     return (
     <div className='certificates'>
@@ -103,11 +113,27 @@ export default function Certificates() {
                         </div>
                     </div>
                 </div>
+
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">
+                        <div className="frame-media frame-media_right" style={{backgroundImage: `url(${ts})`}}></div>
+                        <div className="frame-text" ref={addFrameRef}>
+                            <div className="text-right">
+                                <h2 className='certificates-header certificates-header-right certificates-header-helsinki'>Type Script</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div className="frame" ref={addFrameRef}>
                     <div className="frame__content">More certificates coming soon... :)</div>
                 </div>
             </section>
+        </div>
+
+        <div className="scroll-icon-container">
+            <img className='scroll-icon' src={icon} />
+            <p className='scroll-text'>Scroll to see more!</p>
         </div>
     </div>
     );

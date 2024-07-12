@@ -149,6 +149,40 @@
 	 margin-top: 50px;
 }
 
+@keyframes jump {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
+.scroll-icon-container {
+	position: absolute;
+	top: 50vh;
+	right: 5vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+body.scrolled .scroll-icon-container {
+	transition: 1s ease;
+	opacity: 0;
+}
+
+.scroll-icon {
+	margin-bottom: -100px;
+	animation: jump 1s infinite;
+}
+
+.scroll-text {
+	max-width: 200px;
+	text-align: center;
+}
+
 @media (max-width: 1440px) {
 	.certificates-header-left {
 		transform: translate(-50px, 0);
@@ -172,11 +206,26 @@
 	.frame-media {
 		width: calc(var(--index) * var(--side-small) * 1.1);
 	}
+	.scroll-icon-container {
+		right: 20vw;
+		bottom: -20vh;
+	}
+	.scroll-icon {
+		margin-bottom: -250px;
+	}
+	.scroll-text {
+		max-width: 600px;
+	}
 }
 
 @media (max-width: 768px) {
 	 :root {
 		  --index: calc(0.9vw + 0.9vh);
+	 }
+
+	 .scroll-icon-container {
+		right: 50vw;
+		bottom: 20vh;
 	 }
 
 	 .certificates-header {
@@ -232,5 +281,15 @@
 }
 .certificates-header-right {
 	transform: translate(50px, 0);
+}
+.scroll-icon-container {
+	right: 15vw;
+	bottom: -10vh;
+}
+.scroll-icon {
+	margin-bottom: -150px;
+}
+.scroll-text {
+	max-width: 600px;
 }
 }
