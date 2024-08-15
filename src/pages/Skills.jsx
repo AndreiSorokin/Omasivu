@@ -50,6 +50,12 @@ const Skills = () => {
           <div className="progress-bar" style={{width: "90%"}}></div>
         </div>
       </div>
+      <div className="skill">
+        <div className="skill-name">React Native</div>
+        <div className="progress">
+          <div className="progress-bar" style={{width: "60%"}}></div>
+        </div>
+      </div>
       </div>
 
       <h3 className='skills__header'>Back end</h3>
@@ -145,6 +151,12 @@ const Skills = () => {
         <div className="skill-name">Git</div>
         <div className="progress">
           <div className="progress-bar" style={{width: "100%"}}></div>
+        </div>
+      </div>
+      <div className="skill">
+        <div className="skill-name">CI/CD</div>
+        <div className="progress">
+          <div className="progress-bar" style={{width: "70%"}}></div>
         </div>
       </div>
       </div>

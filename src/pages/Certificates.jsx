@@ -7,6 +7,7 @@ import graphQl from "../img/certificate-graphql.png";
 import integrify from "../img/Integrify.png";
 import Java from "../img/Java.png";
 import ts from "../img/certificate-typescript.png";
+import reactNative from "../img/reactNative.png";
 
 export default function Certificates() {
     const [lastPos, setLastPos] = useState(window.innerHeight / 9);
@@ -120,6 +121,17 @@ export default function Certificates() {
                         <div className="frame-text" ref={addFrameRef}>
                             <div className="text-right">
                                 <h2 className='certificates-header certificates-header-right certificates-header-helsinki'>Type Script</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">
+                        <div className="frame-media frame-media_left" style={{backgroundImage: `url(${reactNative})`}}></div>
+                        <div className="frame-text" ref={addFrameRef}>
+                            <div className="text-left">
+                                <h2 className='certificates-header certificates-header-left'>React Native</h2>
                             </div>
                         </div>
                     </div>
