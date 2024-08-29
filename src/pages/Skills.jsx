@@ -159,6 +159,12 @@ const Skills = () => {
           <div className="progress-bar" style={{width: "70%"}}></div>
         </div>
       </div>
+      <div className="skill">
+        <div className="skill-name">Bash</div>
+        <div className="progress">
+          <div className="progress-bar" style={{width: "40%"}}></div>
+        </div>
+      </div>
       </div>
 
       <h3 className='skills__header'>Design tools</h3>

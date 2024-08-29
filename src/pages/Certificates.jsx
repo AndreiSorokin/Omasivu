@@ -8,6 +8,7 @@ import integrify from "../img/Integrify.png";
 import Java from "../img/Java.png";
 import ts from "../img/certificate-typescript.png";
 import reactNative from "../img/reactNative.png";
+import cicd from "../img/certificate-cicd.png";
 
 export default function Certificates() {
     const [lastPos, setLastPos] = useState(window.innerHeight / 9);
@@ -15,7 +16,7 @@ export default function Certificates() {
     const zVals = useRef([]);
 
     useEffect(() => {
-        const zSpacing = -450;
+        const zSpacing = -400;
         if (framesRef.current.length > 0 && zVals.current.length === 0) {
             zVals.current = framesRef.current.map((_, i) => (i * zSpacing) + zSpacing);
         }
@@ -132,6 +133,17 @@ export default function Certificates() {
                         <div className="frame-text" ref={addFrameRef}>
                             <div className="text-left">
                                 <h2 className='certificates-header certificates-header-left'>React Native</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="frame" ref={addFrameRef}>
+                    <div className="frame__content">
+                        <div className="frame-media frame-media_right" style={{backgroundImage: `url(${cicd})`}}></div>
+                        <div className="frame-text" ref={addFrameRef}>
+                            <div className="text-right">
+                                <h2 className='certificates-header certificates-header-right certificates-header-helsinki'>CI/CD</h2>
                             </div>
                         </div>
                     </div>
